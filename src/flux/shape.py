@@ -211,9 +211,6 @@ class TrimeshShapeModel(ShapeModel):
             directions.
 
         '''
-        if basemesh == None:
-            basemesh = self
-
         # Determine which rays escaped (i.e., can see the sun)
         if basemesh is None:
             I = ~self.is_occluded(np.arange(self.num_faces), Dsun)
